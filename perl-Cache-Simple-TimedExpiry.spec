@@ -1,12 +1,12 @@
 %define module  Cache-Simple-TimedExpiry
 %define name    perl-%{module}
-%define version 0.26
-%define release %mkrel 2
+%define version 0.27
+%define release %mkrel 1
 
 Name:		    %{name}
 Version:	    %{version}
 Release:	    %{release}
-Summary:        Perl module to add expiry to Cache::Simple object
+Summary:            Perl module to add expiry to Cache::Simple object
 License:	    GPL or Artistic
 Group:		    Development/Perl
 Url:		    http://search.cpan.org/dist/%{module}
