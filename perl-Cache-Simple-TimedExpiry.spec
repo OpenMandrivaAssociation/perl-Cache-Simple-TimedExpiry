@@ -15,7 +15,6 @@ Source:		    http://www.cpan.org/modules/by-module/Cache/%{module}-%{version}.ta
 BuildRequires:	perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 Perl module to add expiry to Cache::Simple object.
