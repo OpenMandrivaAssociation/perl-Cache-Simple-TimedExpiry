@@ -1,27 +1,27 @@
-%define module  Cache-Simple-TimedExpiry
-%define name    perl-%{module}
-%define version 0.27
-%define release %mkrel 2
+%define upstream_name    Cache-Simple-TimedExpiry
+%define upstream_version 0.27
 
-Name:		    %{name}
-Version:	    %{version}
-Release:	    %{release}
-Summary:            Perl module to add expiry to Cache::Simple object
-License:	    GPL or Artistic
-Group:		    Development/Perl
-Url:		    http://search.cpan.org/dist/%{module}
-Source:		    http://www.cpan.org/modules/by-module/Cache/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Perl module to add expiry to Cache::Simple object
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Cache/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:      noarch
-BuildRoot:	    %{_tmppath}/%{name}-%{version}
+BuildRoot:	    %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Perl module to add expiry to Cache::Simple object.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -43,5 +43,3 @@ rm -rf %{buildroot}
 %doc Changes 
 %{perl_vendorlib}/Cache
 %{_mandir}/man3/*
-
-
