@@ -8,7 +8,7 @@ Release:	5
 Summary:	Perl module to add expiry to Cache::Simple object
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Cache/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
