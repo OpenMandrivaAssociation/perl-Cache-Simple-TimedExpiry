@@ -1,15 +1,13 @@
 %define upstream_name    Cache-Simple-TimedExpiry
-%define upstream_version 0.27
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.27
+Release:	6
 
 Summary:	Perl module to add expiry to Cache::Simple object
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Cache/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Cache/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 Perl module to add expiry to Cache::Simple object.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -45,9 +43,7 @@ rm -rf %{buildroot}/%{perl_vendorarch}/
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 0.270.0-1mdv2011.0
 + Revision: 405956
-- rebuild using %%perl_convert_version
-
-* Fri Jun 13 2008 Michael Scherer <misc@mandriva.org> 0.27-2mdv2009.0
+- rebuild using %0.27 Fri Jun 13 2008 Michael Scherer <misc@mandriva.org> 0.27-2mdv2009.0
 + Revision: 218996
 - rebuild
 
